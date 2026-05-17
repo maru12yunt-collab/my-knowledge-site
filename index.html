@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>知識ライブラリ</title>
+  <title>Knowledge Library</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
 
@@ -18,80 +18,159 @@
 
 <body class="text-white min-h-screen">
 
-  <div class="max-w-7xl mx-auto p-6">
+  <div class="flex">
 
 ```
-<h1 class="text-5xl font-bold text-yellow-300 mb-2">
-  知識ライブラリ
-</h1>
+<!-- Sidebar -->
+<aside class="w-72 bg-slate-900 border-r border-slate-800 min-h-screen p-6">
+  <h1 class="text-3xl font-bold text-yellow-300 mb-8">
+    Knowledge Library
+  </h1>
 
-<p class="text-slate-400 mb-10">
-  自分専用の知識データベース
-</p>
+  <div class="space-y-4" id="sidebar"></div>
+</aside>
 
-<div id="summary-container"
-  class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-</div>
+<!-- Main -->
+<main class="flex-1 p-10 overflow-auto">
+
+  <div id="content"></div>
+
+</main>
 ```
 
   </div>
 
   <script>
+
     const summaries = [
 
       {
-        title: "Twitter運用戦略",
-        category: "SNSマーケティング",
-        color: "green",
-        points: [
-          "認知→ファン化→購買",
-          "常識破壊で興味付け",
-          "背中で語る発信",
-          "小さな行動を積ませる"
-        ]
-      },
+        title: "Twitter Strategy",
+        category: "SNS Marketing",
 
-      {
-        title: "ファン化の本質",
-        category: "心理設計",
-        color: "blue",
-        points: [
-          "知識だけでなくマインド",
-          "行動している姿を見せる",
-          "理念・目標を語る",
-          "信頼→共感→行動"
+        sections: [
+
+          {
+            title: "認知フェーズ",
+            color: "green",
+            items: [
+              "常識破壊",
+              "尖った意見",
+              "実績を見せる",
+              "理想の未来を見せる"
+            ]
+          },
+
+          {
+            title: "フォローフェーズ",
+            color: "blue",
+            items: [
+              "ノウハウ発信",
+              "行動してる姿",
+              "自己投資",
+              "理念を語る"
+            ]
+          },
+
+          {
+            title: "ファン化",
+            color: "purple",
+            items: [
+              "いいね",
+              "リプ",
+              "メルマガ",
+              "商品購入"
+            ]
+          }
+
         ]
       }
 
     ];
 
-    const container = document.getElementById("summary-container");
 
-    summaries.forEach(summary => {
+    const colorMap = {
+      yellow: "bg-yellow-500/10 border-yellow-400",
+      green: "bg-green-500/10 border-green-400",
+      red: "bg-red-500/10 border-red-400",
+      blue: "bg-blue-500/10 border-blue-400",
+      purple: "bg-purple-500/10 border-purple-400"
+    };
 
-      const card = document.createElement("div");
 
-      card.className =
-        `bg-${summary.color}-500/10 border border-${summary.color}-400 rounded-3xl p-6`;
+    const sidebar = document.getElementById("sidebar");
+    const content = document.getElementById("content");
 
-      card.innerHTML = `
-        <p class="text-sm text-slate-400 mb-2">
-          ${summary.category}
-        </p>
 
-        <h2 class="text-2xl font-bold text-${summary.color}-300 mb-4">
+    summaries.forEach((summary, idx) => {
+
+      // Sidebar
+      const sideCard = document.createElement("div");
+
+      sideCard.className =
+        "bg-slate-800 border border-slate-700 rounded-2xl p-4";
+
+      sideCard.innerHTML = `
+        <h2 class="text-xl font-bold">
           ${summary.title}
         </h2>
 
-        <ul class="space-y-3 text-slate-200">
-          ${summary.points.map(point =>
-            `<li>• ${point}</li>`
-          ).join("")}
-        </ul>
+        <p class="text-slate-400 mt-2 text-sm">
+          ${summary.category}
+        </p>
       `;
 
-      container.appendChild(card);
+      sidebar.appendChild(sideCard);
+
+
+      // Main
+      const wrapper = document.createElement("div");
+
+      wrapper.className = "mb-16";
+
+      wrapper.innerHTML = `
+        <div class="mb-8">
+          <h2 class="text-4xl font-bold mb-2">
+            ${summary.title}
+          </h2>
+
+          <p class="text-slate-400 text-lg">
+            カテゴリ：${summary.category}
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+
+          ${summary.sections.map(section => `
+
+            <div class="rounded-3xl border p-6 shadow-xl ${colorMap[section.color]}">
+
+              <h3 class="text-2xl font-bold mb-4">
+                ${section.title}
+              </h3>
+
+              <ul class="space-y-3 text-base leading-relaxed">
+
+                ${section.items.map(item => `
+                  <li class="flex gap-2">
+                    <span>•</span>
+                    <span>${item}</span>
+                  </li>
+                `).join("")}
+
+              </ul>
+
+            </div>
+
+          `).join("")}
+
+        </div>
+      `;
+
+      content.appendChild(wrapper);
+
     });
+
   </script>
 
 </body>

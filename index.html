@@ -312,7 +312,275 @@
 
 </div>
 ```
+{/* ================= 第5章 ================= */}
 
+<div className="w-full bg-slate-900 rounded-3xl p-8 border border-cyan-400 shadow-2xl">
+  <h2 className="text-4xl font-bold text-cyan-300 mb-8 text-center">
+    第5章｜Twitterアルゴリズム攻略
+  </h2>
+
+  {/* 中心思想 */}
+  <div className="bg-cyan-500/10 border border-cyan-400 rounded-3xl p-6 mb-8">
+    <h3 className="text-2xl font-bold text-cyan-200 mb-4">
+      アルゴリズムの本質
+    </h3>
+
+    <div className="space-y-3 text-slate-200 leading-relaxed">
+      <p>
+        Twitter社は
+        <span className="text-cyan-300 font-bold">
+          「ユーザーを長く滞在させ、広告を見せたい」
+        </span>
+        。
+      </p>
+
+      <p>
+        つまり、
+        <span className="text-cyan-300 font-bold">
+          Twitter社が儲かる行動
+        </span>
+        をするアカウントが優遇される。
+      </p>
+
+      <div className="bg-cyan-500/10 border border-cyan-400 rounded-2xl p-4 mt-4">
+        <div className="text-cyan-200 font-bold mb-2">結論</div>
+        <div className="flex flex-wrap gap-2">
+          {[
+            '滞在時間を伸ばす',
+            'リプを増やす',
+            'ストーリー性',
+            '画像・動画活用',
+            'アプリ内に留める',
+          ].map((item) => (
+            <span
+              key={item}
+              className="bg-cyan-500/20 border border-cyan-400 px-3 py-1 rounded-full text-sm"
+            >
+              {item}
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {/* Twitter社の利益 */}
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+
+    <div className="bg-slate-800 border border-blue-400 rounded-3xl p-6">
+      <h3 className="text-2xl font-bold text-blue-300 mb-4">
+        Twitter社の利益
+      </h3>
+
+      <div className="space-y-3 text-slate-200">
+        <div className="bg-blue-500/10 border border-blue-400 rounded-2xl p-4">
+          • Twitter Blue課金
+        </div>
+
+        <div className="bg-blue-500/10 border border-blue-400 rounded-2xl p-4">
+          • 広告収益
+        </div>
+      </div>
+    </div>
+
+    <div className="bg-slate-800 border border-pink-400 rounded-3xl p-6">
+      <h3 className="text-2xl font-bold text-pink-300 mb-4">
+        嫌われやすい運用
+      </h3>
+
+      <ul className="space-y-2 text-slate-200">
+        <li>• ネガティブすぎる投稿</li>
+        <li>• 炎上しすぎる内容</li>
+        <li>• 即外部リンク誘導</li>
+        <li>• 滞在時間が短い投稿</li>
+      </ul>
+    </div>
+  </div>
+
+  {/* ツイートスコア */}
+  <div className="bg-slate-800 border border-green-400 rounded-3xl p-8 mb-8">
+    <h3 className="text-3xl font-bold text-green-300 mb-6 text-center">
+      ツイートスコア
+    </h3>
+
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+      {/* ポジティブ */}
+      <div>
+        <h4 className="text-xl font-bold text-green-200 mb-4">
+          ポジティブ要素
+        </h4>
+
+        <div className="space-y-3">
+          {[
+            ['いいね', '+0.5'],
+            ['RT', '+1'],
+            ['2分以上滞在', '+11'],
+            ['プロフクリック', '+12'],
+            ['リプ', '+27'],
+            ['リプ返し', '+75'],
+            ['画像・動画', '×2'],
+            ['Twitter Blue', '表示優遇'],
+          ].map(([title, score]) => (
+            <div
+              key={title}
+              className="flex justify-between bg-green-500/10 border border-green-400 rounded-2xl p-3"
+            >
+              <span>{title}</span>
+              <span className="font-bold text-green-300">{score}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* ネガティブ */}
+      <div>
+        <h4 className="text-xl font-bold text-red-200 mb-4">
+          ネガティブ要素
+        </h4>
+
+        <div className="space-y-3">
+          {[
+            ['ブロック・ミュート', '-74'],
+            ['興味なし選択', '-74'],
+            ['迷惑報告', '-369'],
+          ].map(([title, score]) => (
+            <div
+              key={title}
+              className="flex justify-between bg-red-500/10 border border-red-400 rounded-2xl p-3"
+            >
+              <span>{title}</span>
+              <span className="font-bold text-red-300">{score}</span>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-6 bg-yellow-500/10 border border-yellow-400 rounded-2xl p-4">
+          <div className="font-bold text-yellow-300 mb-2">
+            重要
+          </div>
+
+          <p className="text-slate-200">
+            ツイートスコアは
+            <span className="text-yellow-300 font-bold">
+              6時間で半減
+            </span>
+            する。
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {/* ユーザースコア */}
+  <div className="bg-slate-800 border border-purple-400 rounded-3xl p-8 mb-8">
+    <h3 className="text-3xl font-bold text-purple-300 mb-6 text-center">
+      ユーザースコア
+    </h3>
+
+    <div className="flex flex-wrap justify-center gap-4">
+      {[
+        'FF比',
+        '制限履歴',
+        '通報数',
+        '低品質垢と関わらない',
+        'スパム回避',
+        '健全運用',
+      ].map((item) => (
+        <div
+          key={item}
+          className="bg-purple-500/10 border border-purple-400 px-5 py-3 rounded-2xl"
+        >
+          {item}
+        </div>
+      ))}
+    </div>
+  </div>
+
+  {/* クラスタリング */}
+  <div className="bg-slate-800 border border-orange-400 rounded-3xl p-8 mb-8">
+    <h3 className="text-3xl font-bold text-orange-300 mb-6 text-center">
+      クラスタリング
+    </h3>
+
+    <div className="space-y-4 text-slate-200 leading-relaxed">
+      <p>
+        TwitterはAIによって
+        アカウントをジャンル分けしている。
+      </p>
+
+      <div className="bg-orange-500/10 border border-orange-400 rounded-2xl p-4">
+        <div className="font-bold text-orange-200 mb-2">
+          例
+        </div>
+
+        <p>
+          ビジネス投稿が多い
+          → ビジネスクラスタへ分類
+        </p>
+      </div>
+
+      <p>
+        テーマがブレすぎると
+        ジャンル誤認されて不利。
+      </p>
+
+      <div className="bg-orange-500/10 border border-orange-400 rounded-2xl p-4">
+        <span className="text-orange-300 font-bold">
+          専門性と統一感が重要
+        </span>
+      </div>
+    </div>
+  </div>
+
+  {/* 実践戦略 */}
+  <div className="bg-slate-800 border border-yellow-400 rounded-3xl p-8">
+    <h3 className="text-3xl font-bold text-yellow-300 mb-6 text-center">
+      なまいき式アルゴリズム攻略
+    </h3>
+
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+      {[
+        'Twitter Blue加入',
+        '画像・動画を使う',
+        '長文で滞在時間UP',
+        'ストーリー性を入れる',
+        '最後でリプ誘導',
+        'リプ返しを徹底',
+        'テーマを統一',
+        'ファン化を狙う',
+        '可処分時間を奪う',
+      ].map((item) => (
+        <div
+          key={item}
+          className="bg-yellow-500/10 border border-yellow-400 rounded-2xl p-4 text-center"
+        >
+          {item}
+        </div>
+      ))}
+    </div>
+
+    <div className="mt-8 bg-yellow-500/10 border border-yellow-400 rounded-3xl p-6">
+      <h4 className="text-2xl font-bold text-yellow-200 mb-4">
+        最重要ポイント
+      </h4>
+
+      <p className="text-slate-200 leading-relaxed text-lg">
+        最も重要なのは
+        <span className="text-yellow-300 font-bold text-2xl">
+          「滞在時間」
+        </span>
+        。
+
+        読まれるほど、
+        いいね・リプ・ファン化・商品販売まで
+        全てが繋がる。
+      </p>
+    </div>
+  </div>
+</div>
+    
   </div>
 
 </body>

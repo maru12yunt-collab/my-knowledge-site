@@ -1,212 +1,202 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The.X 運用</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The.X 運用</title>
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+  .glass {
+    background: rgba(255,255,255,0.04);
+    backdrop-filter: blur(12px);
+  }
+  .card {
+    transition: all .25s ease;
+  }
+  .card:hover {
+    transform: translateY(-2px);
+  }
+  .fade {
+    transition: all .3s ease;
+  }
+</style>
 </head>
 
-<body class="bg-slate-950 text-white min-h-screen p-6">
+<body class="bg-gradient-to-br from-slate-950 via-slate-900 to-black text-white min-h-screen">
 
-  <main class="max-w-5xl mx-auto space-y-8">
+<main class="max-w-4xl mx-auto px-4 py-10 space-y-6">
 
-    <!-- ヘッダー -->
-    <div class="text-center mb-10">
-      <h1 class="text-5xl font-bold">The.X 運用</h1>
-      <p class="text-slate-400 mt-2">Twitter運用・アルゴリズム・ストーリー戦略 完全整理</p>
-    </div>
+<!-- HEADER -->
+<div class="text-center mb-10">
+  <h1 class="text-5xl font-extrabold tracking-tight bg-gradient-to-r from-cyan-400 via-pink-400 to-yellow-300 bg-clip-text text-transparent">
+    The.X 運用
+  </h1>
+  <p class="text-slate-400 mt-2">Twitter運用 × アルゴリズム × ストーリー戦略</p>
+</div>
 
-    <!-- アコーディオンJS -->
-    <script>
-      function toggle(id){
-        document.getElementById(id).classList.toggle("hidden");
-      }
-    </script>
+<script>
+function toggle(id){
+  const el = document.getElementById(id);
+  el.classList.toggle("hidden");
+}
+</script>
 
-    <!-- ===================== -->
-    <!-- 第4章 -->
-    <!-- ===================== -->
-    <section class="border border-yellow-400 rounded-2xl overflow-hidden">
+<!-- CARD TEMPLATE -->
+<style>
+.section-btn{
+  width:100%;
+  text-align:left;
+  padding:18px 20px;
+  border-radius:16px;
+  font-weight:700;
+  font-size:18px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.section-body{
+  padding:18px 20px;
+  animation: fade .25s ease;
+}
+@keyframes fade{
+  from{opacity:0; transform:translateY(-6px);}
+  to{opacity:1; transform:translateY(0);}
+}
+</style>
 
-      <button onclick="toggle('ch4')" class="w-full px-6 py-5 bg-yellow-500 text-black font-bold text-left text-xl">
-        第4章：Twitter運用の本質（導線設計）
-      </button>
+<!-- ===================== -->
+<!-- 第4章 -->
+<!-- ===================== -->
+<div class="glass border border-yellow-400/30 rounded-2xl card overflow-hidden">
 
-      <div id="ch4" class="hidden p-6 space-y-4 bg-slate-900">
+<button onclick="toggle('ch4')" class="section-btn bg-yellow-500 text-black">
+第4章：Twitter運用の本質（導線設計）
+<span>▼</span>
+</button>
 
-        <p>この章の要点は、「Twitter運用＝フォロワー数ではなく、“人を行動させて商品を買ってもらう導線作り”」という考え方。</p>
+<div id="ch4" class="hidden section-body space-y-3">
 
-        <h3 class="text-yellow-300 font-bold">■ 全体の核心</h3>
-        <p>
-          良い運用＝フォロワー数やインプではなく、
-          <br>・読者を行動させる
-          <br>・ファン化する
-          <br>・商品購入につなげる
-        </p>
+<p class="text-slate-200">この章の要点は、「Twitter運用＝フォロワー数ではなく、“人を行動させて商品を買ってもらう導線作り”」という考え方。</p>
 
-        <p class="text-slate-300">
-          流れは「興味 → 信頼 → 行動 → 購入」
-        </p>
+<p class="text-slate-400">興味 → 信頼 → 行動 → 購入</p>
 
-        <h3 class="text-yellow-300 font-bold">■ 3フェーズ構造</h3>
+<p class="font-bold text-yellow-300">■ 核心</p>
+<p class="text-slate-300">読者を行動させる / ファン化 / 購入導線設計</p>
 
-        <p><b>① 認知・興味</b><br>
-        有益よりも“気になる存在”になることが重要</p>
+<p class="font-bold text-yellow-300">■ フェーズ</p>
+<p class="text-slate-300">①認知 ②信頼 ③ファン化</p>
 
-        <p><b>② フォロー・信頼</b><br>
-        ノウハウ＋行動＋失敗＝信頼形成</p>
+<p class="font-bold text-yellow-300">■ 初期戦略</p>
+<ul class="list-disc ml-5 text-slate-300">
+<li>常識破壊</li>
+<li>理想提示</li>
+<li>批判（文化）</li>
+<li>寄生戦略</li>
+</ul>
 
-        <p><b>③ ファン化</b><br>
-        いいね→RT→リプ→購入へ段階的誘導</p>
+</div>
+</div>
 
-        <h3 class="text-yellow-300 font-bold">■ 初期戦略（0→1万）</h3>
+<!-- ===================== -->
+<!-- 第5章 -->
+<!-- ===================== -->
+<div class="glass border border-cyan-400/30 rounded-2xl card overflow-hidden">
 
-        <p>価値提供より“認知”優先</p>
+<button onclick="toggle('ch5')" class="section-btn bg-cyan-500 text-black">
+第5章：アルゴリズム戦略（なまいき式）
+<span>▼</span>
+</button>
 
-        <ul class="list-disc ml-5 text-slate-300">
-          <li>常識破壊</li>
-          <li>理想提示</li>
-          <li>批判（文化・概念）</li>
-          <li>寄生（大手利用）</li>
-        </ul>
+<div id="ch5" class="hidden section-body space-y-3">
 
-      </div>
-    </section>
+<p class="text-slate-300">
+Twitterは「Twitter社が儲かる投稿」を優遇する。
+</p>
 
-    <!-- ===================== -->
-    <!-- 第5章 -->
-    <!-- ===================== -->
-    <section class="border border-cyan-400 rounded-2xl overflow-hidden">
+<p class="font-bold text-cyan-300">■ 核心</p>
+<p>滞在時間が最重要</p>
 
-      <button onclick="toggle('ch5')" class="w-full px-6 py-5 bg-cyan-500 text-black font-bold text-left text-xl">
-        第5章：アルゴリズム戦略（なまいき式）
-      </button>
+<p class="font-bold text-cyan-300">■ スコア</p>
+<p class="text-slate-300">
+いいね +0.5 / RT +1 / 滞在 +11 / リプ +27 / 返信 +75
+</p>
 
-      <div id="ch5" class="hidden p-6 space-y-4 bg-slate-900">
+<p class="font-bold text-cyan-300">■ 本質</p>
+<p>長文 × ストーリー = 最強</p>
 
-        <p>
-          Twitterは「Twitter社が儲かる投稿」を優遇する。
-          つまりアルゴリズム対策ではなく“利益構造理解”が本質。
-        </p>
+</div>
+</div>
 
-        <h3 class="text-cyan-300 font-bold">■ 本質</h3>
-        <p>
-          滞在時間が最重要指標
-        </p>
+<!-- ===================== -->
+<!-- 第6章 -->
+<!-- ===================== -->
+<div class="glass border border-pink-400/30 rounded-2xl card overflow-hidden">
 
-        <h3 class="text-cyan-300 font-bold">■ スコア構造</h3>
+<button onclick="toggle('ch6')" class="section-btn bg-pink-500 text-black">
+第6章：感情設計とファン化
+<span>▼</span>
+</button>
 
-        <p>
-          ・いいね +0.5<br>
-          ・RT +1<br>
-          ・滞在時間 +11<br>
-          ・リプ +27<br>
-          ・返信 +75
-        </p>
+<div id="ch6" class="hidden section-body space-y-3">
 
-        <h3 class="text-cyan-300 font-bold">■ 核心</h3>
-        <p>
-          「読ませる→滞在→反応→拡散」
-        </p>
+<p class="text-slate-300">人は“情報”ではなく“感情”に動く</p>
 
-        <p>
-          長文＋ストーリーが最強構造
-        </p>
+<p class="font-bold text-pink-300">■ 要素</p>
+<ul class="list-disc ml-5 text-slate-300">
+<li>理想</li>
+<li>敵</li>
+<li>弱さ</li>
+<li>挑戦</li>
+<li>行動</li>
+</ul>
 
-      </div>
-    </section>
+<p class="font-bold text-pink-300">■ 本質</p>
+<p>興味 → ファン化 → 価値提供</p>
 
-    <!-- ===================== -->
-    <!-- 第6章 -->
-    <!-- ===================== -->
-    <section class="border border-pink-400 rounded-2xl overflow-hidden">
+<p class="text-slate-400">
+ノウハウはコピーされるが“人間性”はコピーされない
+</p>
 
-      <button onclick="toggle('ch6')" class="w-full px-6 py-5 bg-pink-500 text-black font-bold text-left text-xl">
-        第6章：感情設計とファン化
-      </button>
+</div>
+</div>
 
-      <div id="ch6" class="hidden p-6 space-y-4 bg-slate-900">
+<!-- ===================== -->
+<!-- 第7章 -->
+<!-- ===================== -->
+<div class="glass border border-indigo-400/30 rounded-2xl card overflow-hidden">
 
-        <p>
-          人は“情報”ではなく“感情が動いた人”に惹かれる
-        </p>
+<button onclick="toggle('ch7')" class="section-btn bg-indigo-500 text-black">
+第7章：長文ストーリー完全テンプレ
+<span>▼</span>
+</button>
 
-        <h3 class="text-pink-300 font-bold">■ 重要要素</h3>
+<div id="ch7" class="hidden section-body space-y-3">
 
-        <ul class="list-disc ml-5 text-slate-300">
-          <li>理想提示</li>
-          <li>敵作り</li>
-          <li>弱み</li>
-          <li>挑戦</li>
-          <li>行動</li>
-        </ul>
+<p class="text-slate-300">長文ツイート＝滞在時間の最大化装置</p>
 
-        <h3 class="text-pink-300 font-bold">■ 本質</h3>
-        <p>
-          興味 → ファン化 → 価値提供の順番
-        </p>
+<p class="font-bold text-indigo-300">■ 構成</p>
+<ul class="list-disc ml-5 text-slate-300">
+<li>キャッチ</li>
+<li>導入</li>
+<li>事件</li>
+<li>感情</li>
+<li>教訓</li>
+<li>行動</li>
+<li>締め</li>
+</ul>
 
-        <p>
-          ノウハウはコピーされるが「人間性」はコピーされない
-        </p>
+<p class="font-bold text-indigo-300">■ 本質</p>
+<p>出来事 → 感情 → ロジック → 教訓</p>
 
-      </div>
-    </section>
+<p class="font-bold text-indigo-300">■ 核心</p>
+<p>ストーリーは「感情設計」</p>
 
-    <!-- ===================== -->
-    <!-- 第7章 -->
-    <!-- ===================== -->
-    <section class="border border-indigo-400 rounded-2xl overflow-hidden">
+<p class="text-slate-400">人は感情で動き、論理で納得する</p>
 
-      <button onclick="toggle('ch7')" class="w-full px-6 py-5 bg-indigo-500 text-black font-bold text-left text-xl">
-        第7章：長文ストーリー完全テンプレ
-      </button>
+</div>
+</div>
 
-      <div id="ch7" class="hidden p-6 space-y-5 bg-slate-900">
-
-        <p>
-          長文ツイートは「滞在時間」を最大化する武器。
-        </p>
-
-        <h3 class="text-indigo-300 font-bold">■ 構成</h3>
-        <ul class="list-disc ml-5 text-slate-300">
-          <li>キャッチ</li>
-          <li>導入</li>
-          <li>事件</li>
-          <li>感情</li>
-          <li>教訓</li>
-          <li>行動</li>
-          <li>締め</li>
-        </ul>
-
-        <h3 class="text-indigo-300 font-bold">■ ストーリー構造</h3>
-        <p>
-          出来事 → 感情 → ロジック → 教訓
-        </p>
-
-        <h3 class="text-indigo-300 font-bold">■ 核心</h3>
-        <p>
-          ストーリーは事実ではなく「感情設計」
-        </p>
-
-        <p>
-          人は感情で動き、論理で納得する
-        </p>
-
-        <h3 class="text-indigo-300 font-bold">■ キャッチ要素</h3>
-        <ul class="list-disc ml-5 text-slate-300">
-          <li>数字</li>
-          <li>損失</li>
-          <li>常識破壊</li>
-          <li>矛盾</li>
-          <li>ターゲティング</li>
-        </ul>
-
-      </div>
-    </section>
-
-  </main>
-
+</main>
 </body>
 </html>

@@ -11,7 +11,7 @@ body {
   background:#05070d;
 }
 
-/* タイトル枠 */
+/* タイトル */
 .title {
   border: 2px solid #ff4fd8;
   padding: 10px 18px;
@@ -25,17 +25,16 @@ body {
   border-radius: 18px;
 }
 
-/* hoverボタン */
+/* hover */
 .btn:hover {
   background: rgba(255,255,255,0.03);
 }
 
-/* 波線アニメ */
+/* 波線 */
 .underline-wave {
   position: relative;
   display: inline-block;
 }
-
 .underline-wave::after {
   content: "";
   position: absolute;
@@ -43,21 +42,24 @@ body {
   bottom: -3px;
   width: 100%;
   height: 6px;
-  background: linear-gradient(90deg, #ff4fd8, #4fd8ff, #a855f7);
-  opacity: 0.8;
+  background: linear-gradient(90deg,#ff4fd8,#4fd8ff,#a855f7);
   border-radius: 10px;
-  filter: blur(0.3px);
-  animation: wave 2s infinite linear;
+  opacity: 0.85;
+  animation: wave 2s linear infinite;
 }
-
 @keyframes wave {
   0% { transform: translateX(0); }
   100% { transform: translateX(10px); }
 }
 
+/* 余白強化ブロック */
+.block {
+  margin-bottom: 14px;
+}
+
 pre {
   white-space: pre-wrap;
-  line-height: 1.8;
+  line-height: 1.9;
 }
 </style>
 </head>
@@ -90,47 +92,51 @@ function toggle(id){
 <span>▼</span>
 </button>
 
-<div id="ch4" class="hidden p-6 space-y-4 text-gray-200">
+<div id="ch4" class="hidden p-6 text-gray-200">
 
-<pre>
+<div class="block">
 この章の要点は、
 <span class="underline-wave">Twitter運用＝フォロワー数ではなく“人を行動させて商品を買ってもらう導線作り”</span>
+</div>
 
+<div class="block">
 全体の核心：
-
 「良い運用＝フォロワー数やインプ数」ではなく
+読者を行動させる・ファン化・商品購入につなげる
+</div>
 
-・読者を行動させる
-・ファン化する
-・商品購入につなげる
-
+<div class="block">
 つまり
 <span class="underline-wave">興味 → 信頼 → 行動 → 購入</span>
+これが設計思想
+</div>
 
-これが設計思想。
-
+<div class="block">
 ① 認知・興味フェーズ
 目的：気になる存在になる
+有益ではなく圧倒的な興味づけ
+</div>
 
-必要なのは有益ではなく
-<span class="underline-wave">圧倒的な興味づけ</span>
-
+<div class="block">
 要素：
 実績 / 常識破壊 / ストーリー / 理想 / 尖り
+</div>
 
+<div class="block">
 ② フォローフェーズ
 目的：信頼獲得
-
-重要：
 ノウハウ / 行動 / 挑戦 / 失敗 / 日常
+</div>
 
+<div class="block">
 <span class="underline-wave">背中で語る</span>
+</div>
 
+<div class="block">
 ③ ファン化フェーズ
 小さな行動 → 購入
-
 いいね → RT → リプ → 購入
-</pre>
+</div>
 
 </div>
 </div>
@@ -145,37 +151,38 @@ function toggle(id){
 <span>▼</span>
 </button>
 
-<div id="ch5" class="hidden p-6 space-y-4 text-gray-200">
+<div id="ch5" class="hidden p-6 text-gray-200">
 
-<pre>
+<div class="block">
 2022年12月 インプ公開
 2023年4月 アルゴリズム公開
+</div>
 
-目的は
+<div class="block">
+目的：
 <span class="underline-wave">Twitter社が儲かる運用を増やすため</span>
+</div>
 
+<div class="block">
 収益：
-・広告
-・Twitter Blue
-
+広告 / Twitter Blue
 → 滞在時間が最重要
+</div>
 
-アルゴリズム構造：
-
+<div class="block">
 ツイートスコア：
-いいね +0.5
-RT +1
-滞在2分 +11
-リプ +27
-返信 +75
+いいね +0.5 / RT +1 / 滞在2分 +11 / リプ +27 / 返信 +75
+</div>
 
+<div class="block">
 ネガティブ：
-ブロック -74
-通報 -369
+ブロック -74 / 通報 -369
+</div>
 
+<div class="block">
 結論：
 <span class="underline-wave">滞在時間が全て</span>
-</pre>
+</div>
 
 </div>
 </div>
@@ -190,28 +197,36 @@ RT +1
 <span>▼</span>
 </button>
 
-<div id="ch6" class="hidden p-6 space-y-4 text-gray-200">
+<div id="ch6" class="hidden p-6 text-gray-200">
 
-<pre>
+<div class="block">
 人は
 <span class="underline-wave">情報ではなく“感情が動いた人”に惹かれる</span>
+</div>
 
+<div class="block">
 重要：
 理想 / 敵 / 弱さ / 挑戦 / 感情
+</div>
 
+<div class="block">
 順番：
 興味 → ファン化 → 価値提供
+</div>
 
+<div class="block">
 多くは逆で失敗
+理由：感情が動いていない
+</div>
 
-理由：
-感情が動いていない
-
+<div class="block">
 ファン化：
 共感 / 羨望 / 悔しさ / 応援
+</div>
 
+<div class="block">
 <span class="underline-wave">ノウハウはコピーされるがキャラはコピーされない</span>
-</pre>
+</div>
 
 </div>
 </div>
@@ -226,43 +241,61 @@ RT +1
 <span>▼</span>
 </button>
 
-<div id="ch7" class="hidden p-6 space-y-4 text-gray-200">
+<div id="ch7" class="hidden p-6 text-gray-200">
 
-<pre>
+<div class="block">
 長文ツイート構造：
-
 キャッチ → 導入 → 事件 → 感情 → ロジック → 教訓 → 行動 → 締め
+</div>
 
+<div class="block">
 ストーリー：
 出来事 × 感情 × 論理 × 教訓
+</div>
 
+<div class="block">
 キャッチ：
 数字 / 損失 / 常識破壊
+</div>
 
+<div class="block">
 導入：
 人物・場所・時間
+</div>
 
+<div class="block">
 事件：
 ストーリーの核心
+</div>
 
+<div class="block">
 感情：
 共感最大化
+</div>
 
+<div class="block">
 ロジック：
 教訓の理由
+</div>
 
+<div class="block">
 教訓：
 教育
+</div>
 
+<div class="block">
 行動：
 コミットメント
+</div>
 
-締め：
+<div class="block">
 <span class="underline-wave">ポジティブで終わる</span>
+</div>
 
+<div class="block">
 本質：
 <span class="underline-wave">ストーリーは感情設計</span>
-</pre>
+</div>
 
 </div>
 </div>

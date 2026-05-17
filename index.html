@@ -11,7 +11,6 @@ body {
   background:#05070d;
 }
 
-/* タイトル */
 .title {
   border: 2px solid #ff4fd8;
   padding: 10px 18px;
@@ -19,40 +18,37 @@ body {
   display:inline-block;
 }
 
-/* カード */
 .glow {
   border: 1px solid rgba(255,255,255,0.12);
   border-radius: 18px;
 }
 
-/* hover */
 .btn:hover {
   background: rgba(255,255,255,0.03);
 }
 
-/* 波線 */
+/* ========================= */
+/* 🔻 波線（修正版：赤・細め） */
+/* ========================= */
 .underline-wave {
   position: relative;
   display: inline-block;
 }
+
 .underline-wave::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -3px;
+  bottom: -2px;
   width: 100%;
-  height: 6px;
-  background: linear-gradient(90deg,#ff4fd8,#4fd8ff,#a855f7);
-  border-radius: 10px;
-  opacity: 0.85;
-  animation: wave 2s linear infinite;
-}
-@keyframes wave {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(10px); }
+  height: 2px; /* ← 細くした */
+  background: #ff3b3b; /* ← 赤単色 */
+  opacity: 0.9;
+  border-radius: 2px;
 }
 
-/* 余白強化ブロック */
+/* アニメ削除（静かで見やすい） */
+
 .block {
   margin-bottom: 14px;
 }
@@ -100,42 +96,11 @@ function toggle(id){
 </div>
 
 <div class="block">
-全体の核心：
-「良い運用＝フォロワー数やインプ数」ではなく
-読者を行動させる・ファン化・商品購入につなげる
-</div>
-
-<div class="block">
-つまり
-<span class="underline-wave">興味 → 信頼 → 行動 → 購入</span>
-これが設計思想
-</div>
-
-<div class="block">
-① 認知・興味フェーズ
-目的：気になる存在になる
-有益ではなく圧倒的な興味づけ
-</div>
-
-<div class="block">
-要素：
-実績 / 常識破壊 / ストーリー / 理想 / 尖り
-</div>
-
-<div class="block">
-② フォローフェーズ
-目的：信頼獲得
-ノウハウ / 行動 / 挑戦 / 失敗 / 日常
+興味 → 信頼 → 行動 → 購入
 </div>
 
 <div class="block">
 <span class="underline-wave">背中で語る</span>
-</div>
-
-<div class="block">
-③ ファン化フェーズ
-小さな行動 → 購入
-いいね → RT → リプ → 購入
 </div>
 
 </div>
@@ -154,29 +119,11 @@ function toggle(id){
 <div id="ch5" class="hidden p-6 text-gray-200">
 
 <div class="block">
-2022年12月 インプ公開
-2023年4月 アルゴリズム公開
+<span class="underline-wave">Twitter社が儲かる運用を増やすために設計されている</span>
 </div>
 
 <div class="block">
-目的：
-<span class="underline-wave">Twitter社が儲かる運用を増やすため</span>
-</div>
-
-<div class="block">
-収益：
-広告 / Twitter Blue
-→ 滞在時間が最重要
-</div>
-
-<div class="block">
-ツイートスコア：
-いいね +0.5 / RT +1 / 滞在2分 +11 / リプ +27 / 返信 +75
-</div>
-
-<div class="block">
-ネガティブ：
-ブロック -74 / 通報 -369
+滞在時間が最重要
 </div>
 
 <div class="block">
@@ -205,27 +152,8 @@ function toggle(id){
 </div>
 
 <div class="block">
-重要：
-理想 / 敵 / 弱さ / 挑戦 / 感情
-</div>
-
-<div class="block">
-順番：
-興味 → ファン化 → 価値提供
-</div>
-
-<div class="block">
-多くは逆で失敗
-理由：感情が動いていない
-</div>
-
-<div class="block">
-ファン化：
-共感 / 羨望 / 悔しさ / 応援
-</div>
-
-<div class="block">
-<span class="underline-wave">ノウハウはコピーされるがキャラはコピーされない</span>
+ノウハウはコピーされるが
+<span class="underline-wave">キャラはコピーされない</span>
 </div>
 
 </div>
@@ -244,57 +172,12 @@ function toggle(id){
 <div id="ch7" class="hidden p-6 text-gray-200">
 
 <div class="block">
-長文ツイート構造：
-キャッチ → 導入 → 事件 → 感情 → ロジック → 教訓 → 行動 → 締め
+ストーリーは
+<span class="underline-wave">感情設計</span>
 </div>
 
 <div class="block">
-ストーリー：
-出来事 × 感情 × 論理 × 教訓
-</div>
-
-<div class="block">
-キャッチ：
-数字 / 損失 / 常識破壊
-</div>
-
-<div class="block">
-導入：
-人物・場所・時間
-</div>
-
-<div class="block">
-事件：
-ストーリーの核心
-</div>
-
-<div class="block">
-感情：
-共感最大化
-</div>
-
-<div class="block">
-ロジック：
-教訓の理由
-</div>
-
-<div class="block">
-教訓：
-教育
-</div>
-
-<div class="block">
-行動：
-コミットメント
-</div>
-
-<div class="block">
-<span class="underline-wave">ポジティブで終わる</span>
-</div>
-
-<div class="block">
-本質：
-<span class="underline-wave">ストーリーは感情設計</span>
+キャッチ → 導入 → 事件 → 感情 → 教訓 → 行動 → 締め
 </div>
 
 </div>

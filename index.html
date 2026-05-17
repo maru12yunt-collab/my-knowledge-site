@@ -4,152 +4,157 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>知識ライブラリ</title>
-
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-slate-950 text-white min-h-screen p-8">
+<body class="bg-slate-950 text-white min-h-screen p-6">
 
-<main class="max-w-7xl mx-auto space-y-20">
+<main class="max-w-5xl mx-auto space-y-6">
 
   <!-- タイトル -->
-  <div class="text-center">
-    <h1 class="text-5xl font-bold mb-4">知識ライブラリ</h1>
-    <p class="text-slate-400 text-lg">Twitter運用・アルゴリズム戦略まとめ</p>
+  <div class="text-center mb-10">
+    <h1 class="text-4xl md:text-5xl font-bold mb-2">知識ライブラリ</h1>
+    <p class="text-slate-400">Twitter運用・ストーリー・アルゴリズム戦略</p>
   </div>
 
-  <!-- ========================= -->
-  <!-- Twitter運用フェーズ戦略 -->
-  <!-- ========================= -->
+  <!-- ===================== -->
+  <!-- アコーディオン関数 -->
+  <!-- ===================== -->
+  <script>
+    function toggleSection(id) {
+      const el = document.getElementById(id);
+      el.classList.toggle("hidden");
+    }
+  </script>
 
-  <section class="space-y-10">
+  <!-- ===================== -->
+  <!-- 第5章 -->
+  <!-- ===================== -->
+  <div class="bg-slate-900 rounded-2xl border border-cyan-400 overflow-hidden">
 
-    <div class="bg-yellow-400 text-black px-8 py-4 rounded-3xl text-2xl font-bold text-center">
-      Twitter運用フェーズ戦略
-    </div>
+    <button onclick="toggleSection('ch5')" class="w-full text-left px-6 py-5 flex justify-between items-center hover:bg-slate-800 transition">
+      <span class="text-xl font-bold text-cyan-300">第5章：アルゴリズム運用戦略</span>
+      <span class="text-cyan-400">▼</span>
+    </button>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div id="ch5" class="hidden px-6 pb-6 space-y-4">
 
-      <div class="bg-slate-900 border border-yellow-400 rounded-3xl p-6">
-        <h2 class="text-yellow-300 text-2xl font-bold mb-4">目的</h2>
-        <ul class="space-y-2 text-slate-200">
-          <li>フォロワー数だけではない</li>
-          <li>インプ数だけではない</li>
-          <li>人を行動させる</li>
-          <li>商品購入へ導く</li>
-        </ul>
-      </div>
-
-      <div class="bg-slate-900 border border-cyan-400 rounded-3xl p-6">
-        <h2 class="text-cyan-300 text-2xl font-bold mb-4">読者心理</h2>
-        <div class="flex flex-wrap gap-2">
-          <span class="bg-cyan-500/20 border border-cyan-400 px-3 py-1 rounded-full">興味</span>
-          <span class="bg-cyan-500/20 border border-cyan-400 px-3 py-1 rounded-full">学習</span>
-          <span class="bg-cyan-500/20 border border-cyan-400 px-3 py-1 rounded-full">共感</span>
-          <span class="bg-cyan-500/20 border border-cyan-400 px-3 py-1 rounded-full">行動</span>
-          <span class="bg-cyan-500/20 border border-cyan-400 px-3 py-1 rounded-full">購入</span>
-        </div>
-      </div>
-
-      <div class="bg-slate-900 border border-pink-400 rounded-3xl p-6">
-        <h2 class="text-pink-300 text-2xl font-bold mb-4">核心</h2>
-        <p class="text-slate-200">
-          有益ではなく<span class="text-pink-300 font-bold">感情を動かす人</span>が伸びる
-        </p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ========================= -->
-  <!-- アルゴリズム -->
-  <!-- ========================= -->
-
-  <section class="space-y-10">
-
-    <div class="bg-cyan-400 text-black px-8 py-4 rounded-3xl text-2xl font-bold text-center">
-      第5章 アルゴリズム戦略
-    </div>
-
-    <div class="bg-slate-900 border border-pink-400 rounded-3xl p-6">
-      <h2 class="text-pink-300 text-2xl font-bold mb-4">最重要指標</h2>
-      <div class="text-5xl font-bold text-pink-300 text-center py-10">
-        滞在時間
-      </div>
-    </div>
-
-  </section>
-
-  <!-- ========================= -->
-  <!-- 第6章 -->
-  <!-- ========================= -->
-
-  <section class="space-y-10">
-
-    <div class="bg-yellow-400 text-black px-8 py-4 rounded-3xl text-2xl font-bold text-center">
-      第6章：興味づけ・ファン化・価値提供
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-
-      <div class="bg-yellow-500/10 border border-yellow-400 rounded-3xl p-6">
-        <h3 class="text-yellow-300 text-xl font-bold mb-3">興味づけ</h3>
-        <p class="text-slate-200">理想・常識破壊・ギャップ</p>
-      </div>
-
-      <div class="bg-purple-500/10 border border-purple-400 rounded-3xl p-6">
-        <h3 class="text-purple-300 text-xl font-bold mb-3">ファン化</h3>
-        <p class="text-slate-200">行動・失敗・リアル</p>
-      </div>
-
-      <div class="bg-blue-500/10 border border-blue-400 rounded-3xl p-6">
-        <h3 class="text-blue-300 text-xl font-bold mb-3">価値提供</h3>
-        <p class="text-slate-200">ノウハウ・構造化</p>
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- ========================= -->
-  <!-- 第7章（修正版） -->
-  <!-- ========================= -->
-
-  <section class="space-y-10">
-
-    <div class="bg-indigo-400 text-black px-8 py-4 rounded-3xl text-2xl font-bold text-center">
-      第7章：長文ツイートテンプレ
-    </div>
-
-    <div class="bg-slate-900 border border-indigo-400 rounded-3xl p-6">
-      <h2 class="text-indigo-300 text-2xl font-bold mb-4">本質</h2>
-      <p class="text-slate-200">
-        有益ではなく<span class="text-indigo-300 font-bold">ストーリーで滞在時間を伸ばす</span>
-      </p>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-
-      <div class="bg-slate-900 border border-indigo-400 rounded-3xl p-6">
-        <h3 class="text-indigo-300 font-bold mb-3">4要素</h3>
+      <div class="bg-slate-950 p-4 rounded-xl border border-cyan-400">
+        <h3 class="text-cyan-300 font-bold mb-2">本質</h3>
         <ul class="text-slate-200 space-y-1">
-          <li>出来事</li>
-          <li>感情</li>
-          <li>論理</li>
-          <li>教訓</li>
+          <li>Twitter社が儲かる投稿が優遇</li>
+          <li>滞在時間が最重要</li>
+          <li>広告に向く投稿が強い</li>
+          <li>外部リンクは弱い</li>
         </ul>
       </div>
 
-      <div class="bg-slate-900 border border-indigo-400 rounded-3xl p-6">
-        <h3 class="text-indigo-300 font-bold mb-3">構造</h3>
-        <p class="text-slate-200 text-sm">
-          キャッチ → 導入 → 事件 → 感情 → 論理 → 教訓 → 行動
-        </p>
+      <div class="bg-slate-950 p-4 rounded-xl border border-pink-400">
+        <h3 class="text-pink-300 font-bold mb-2">最重要指標</h3>
+        <div class="text-4xl font-bold text-pink-300">滞在時間</div>
       </div>
 
     </div>
+  </div>
 
-  </section>
+  <!-- ===================== -->
+  <!-- 第6章 -->
+  <!-- ===================== -->
+  <div class="bg-slate-900 rounded-2xl border border-yellow-400 overflow-hidden">
+
+    <button onclick="toggleSection('ch6')" class="w-full text-left px-6 py-5 flex justify-between items-center hover:bg-slate-800 transition">
+      <span class="text-xl font-bold text-yellow-300">第6章：興味づけ・ファン化・価値提供</span>
+      <span class="text-yellow-400">▼</span>
+    </button>
+
+    <div id="ch6" class="hidden px-6 pb-6 grid md:grid-cols-3 gap-4">
+
+      <div class="bg-slate-950 border border-yellow-400 rounded-xl p-4">
+        <h3 class="text-yellow-300 font-bold mb-2">興味づけ</h3>
+        <ul class="text-slate-200 text-sm space-y-1">
+          <li>理想</li>
+          <li>常識破壊</li>
+          <li>ギャップ</li>
+          <li>仮想敵</li>
+        </ul>
+      </div>
+
+      <div class="bg-slate-950 border border-purple-400 rounded-xl p-4">
+        <h3 class="text-purple-300 font-bold mb-2">ファン化</h3>
+        <ul class="text-slate-200 text-sm space-y-1">
+          <li>失敗談</li>
+          <li>行動</li>
+          <li>自己投資</li>
+          <li>リアル</li>
+        </ul>
+      </div>
+
+      <div class="bg-slate-950 border border-blue-400 rounded-xl p-4">
+        <h3 class="text-blue-300 font-bold mb-2">価値提供</h3>
+        <ul class="text-slate-200 text-sm space-y-1">
+          <li>手順化</li>
+          <li>構造化</li>
+          <li>比較</li>
+          <li>ノウハウ</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ===================== -->
+  <!-- 第7章 -->
+  <!-- ===================== -->
+  <div class="bg-slate-900 rounded-2xl border border-indigo-400 overflow-hidden">
+
+    <button onclick="toggleSection('ch7')" class="w-full text-left px-6 py-5 flex justify-between items-center hover:bg-slate-800 transition">
+      <span class="text-xl font-bold text-indigo-300">第7章：長文ストーリーツイートテンプレ</span>
+      <span class="text-indigo-400">▼</span>
+    </button>
+
+    <div id="ch7" class="hidden px-6 pb-6 space-y-4">
+
+      <div class="bg-slate-950 border border-indigo-400 rounded-xl p-4">
+        <h3 class="text-indigo-300 font-bold mb-2">本質</h3>
+        <p class="text-slate-200">
+          有益ではなく「ストーリーで滞在時間を伸ばす」
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-4">
+
+        <div class="bg-slate-950 border border-indigo-400 rounded-xl p-4">
+          <h3 class="text-indigo-300 font-bold mb-2">4要素</h3>
+          <ul class="text-slate-200 text-sm space-y-1">
+            <li>出来事</li>
+            <li>感情</li>
+            <li>論理</li>
+            <li>教訓</li>
+          </ul>
+        </div>
+
+        <div class="bg-slate-950 border border-indigo-400 rounded-xl p-4">
+          <h3 class="text-indigo-300 font-bold mb-2">構造</h3>
+          <p class="text-slate-200 text-sm">
+            キャッチ → 導入 → 事件 → 感情 → 論理 → 教訓 → 行動 → 締め
+          </p>
+        </div>
+
+      </div>
+
+      <div class="bg-slate-950 border border-indigo-400 rounded-xl p-4">
+        <h3 class="text-indigo-300 font-bold mb-2">キャッチ型</h3>
+        <ul class="text-slate-200 text-sm space-y-1">
+          <li>数字（7000万円失った）</li>
+          <li>損失（1億円逃した）</li>
+          <li>常識破壊</li>
+          <li>ターゲット刺し</li>
+          <li>裏情報</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
 
 </main>
 

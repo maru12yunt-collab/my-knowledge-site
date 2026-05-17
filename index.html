@@ -23,6 +23,27 @@ body {
 .glow {
   border: 1px solid rgba(255,255,255,0.12);
   border-radius: 18px;
+
+  /* 追加：画像レイヤー用 */
+  position: relative;
+  overflow: hidden;
+}
+
+/* 追加：章ごとの背景画像（超薄く） */
+.glow::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('/mnt/data/なまいき.jpg') center/cover no-repeat;
+  opacity: 0.06;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* 中身を前面に */
+.glow > * {
+  position: relative;
+  z-index: 1;
 }
 
 /* hover */

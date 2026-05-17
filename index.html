@@ -22,7 +22,164 @@
       document.getElementById(id).classList.toggle("hidden");
     }
   </script>
+<!-- ===================== -->
+<!-- 第4章（追加用） -->
+<!-- ===================== -->
+<div class="bg-slate-900 rounded-2xl border border-yellow-400 overflow-hidden mb-6">
 
+  <button onclick="toggleSection('ch4')" class="w-full text-left px-6 py-5 flex justify-between items-center hover:bg-slate-800 transition">
+    <span class="text-xl font-bold text-yellow-300">
+      第4章：Twitter運用の本質（導線設計）
+    </span>
+    <span class="text-yellow-400">▼</span>
+  </button>
+
+  <div id="ch4" class="hidden px-6 pb-6 space-y-6 text-slate-200">
+
+    <!-- 核心 -->
+    <div class="bg-slate-950 border border-yellow-400 rounded-2xl p-5">
+      <h3 class="text-yellow-300 font-bold mb-2">この章の核心</h3>
+      <p class="leading-relaxed">
+        Twitter運用は「フォロワー数を増やすゲーム」ではなく、
+        <span class="text-yellow-300 font-bold">人を行動させ、商品購入へ導く導線設計</span>
+        である。
+      </p>
+    </div>
+
+    <!-- 本質フロー -->
+    <div class="bg-slate-950 border border-cyan-400 rounded-2xl p-5">
+      <h3 class="text-cyan-300 font-bold mb-3">本質的な流れ</h3>
+
+      <div class="flex flex-wrap gap-2">
+        <span class="bg-cyan-500/20 border border-cyan-400 px-3 py-1 rounded-full">興味</span>
+        <span class="bg-cyan-500/20 border border-cyan-400 px-3 py-1 rounded-full">信頼</span>
+        <span class="bg-cyan-500/20 border border-cyan-400 px-3 py-1 rounded-full">行動</span>
+        <span class="bg-cyan-500/20 border border-cyan-400 px-3 py-1 rounded-full">購入</span>
+      </div>
+
+      <p class="mt-4 text-sm text-slate-400">
+        ※重要：最初から「有益」は不要。まず感情を動かすことが優先。
+      </p>
+    </div>
+
+    <!-- 3フェーズ -->
+    <div class="grid md:grid-cols-3 gap-4">
+
+      <!-- ①認知 -->
+      <div class="bg-slate-950 border border-green-400 rounded-2xl p-5">
+        <h3 class="text-green-300 font-bold mb-3">① 認知・興味フェーズ</h3>
+
+        <p class="text-sm mb-3 text-slate-300">
+          「なんだこいつ？」を作る段階。役立つ情報はまだ不要。
+        </p>
+
+        <ul class="text-sm space-y-1">
+          <li>・実績</li>
+          <li>・過激な意見</li>
+          <li>・常識破壊</li>
+          <li>・ストーリー</li>
+          <li>・理想の未来</li>
+        </ul>
+
+        <p class="mt-3 text-xs text-slate-400">
+          👉 人は最初、有益ではなく“違和感”に反応する
+        </p>
+      </div>
+
+      <!-- ②フォロー -->
+      <div class="bg-slate-950 border border-blue-400 rounded-2xl p-5">
+        <h3 class="text-blue-300 font-bold mb-3">② フォローフェーズ</h3>
+
+        <p class="text-sm mb-3 text-slate-300">
+          「気になる人」→「信頼できる人」に変える段階。
+        </p>
+
+        <ul class="text-sm space-y-1">
+          <li>・ノウハウ発信</li>
+          <li>・行動・挑戦</li>
+          <li>・自己投資</li>
+          <li>・失敗談</li>
+          <li>・理念・目標</li>
+        </ul>
+
+        <div class="mt-3 bg-blue-500/10 border border-blue-400 rounded-xl p-3 text-xs">
+          <span class="text-blue-300 font-bold">核心：</span>
+          背中で語る（実践してる姿が最強の説得力）
+        </div>
+      </div>
+
+      <!-- ③ファン化 -->
+      <div class="bg-slate-950 border border-purple-400 rounded-2xl p-5">
+        <h3 class="text-purple-300 font-bold mb-3">③ ファン化フェーズ</h3>
+
+        <p class="text-sm mb-3 text-slate-300">
+          小さな行動を積み重ねて最終的に購入へ。
+        </p>
+
+        <ul class="text-sm space-y-1">
+          <li>・いいね</li>
+          <li>・リプ</li>
+          <li>・RT</li>
+          <li>・スペース</li>
+          <li>・購入</li>
+        </ul>
+
+        <p class="mt-3 text-xs text-slate-400">
+          👉 行動の積み重ねが“ファン化”
+        </p>
+      </div>
+
+    </div>
+
+    <!-- 初速戦略 -->
+    <div class="bg-slate-950 border border-red-400 rounded-2xl p-5">
+
+      <h3 class="text-red-300 font-bold mb-4">初期運用（0〜1万フォロワー）</h3>
+
+      <p class="text-sm text-slate-300 mb-4">
+        最初のフェーズは「価値提供」ではなく「認知拡大」が最優先。
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-3">
+
+        <div class="bg-red-500/10 border border-red-400 rounded-xl p-4">
+          <p class="font-bold text-red-300">① 常識破壊</p>
+          <p class="text-sm">価値観を壊して議論を起こす</p>
+        </div>
+
+        <div class="bg-red-500/10 border border-red-400 rounded-xl p-4">
+          <p class="font-bold text-red-300">② 理想の未来</p>
+          <p class="text-sm">成功・自由・成果の可視化</p>
+        </div>
+
+        <div class="bg-red-500/10 border border-red-400 rounded-xl p-4">
+          <p class="font-bold text-red-300">③ ターゲット外批判</p>
+          <p class="text-sm">文化批判で軽い炎上を起こす</p>
+        </div>
+
+        <div class="bg-red-500/10 border border-red-400 rounded-xl p-4">
+          <p class="font-bold text-red-300">④ 寄生戦略</p>
+          <p class="text-sm">大手の発信に乗り拡散を狙う</p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- 本質まとめ -->
+    <div class="bg-slate-950 border border-yellow-400 rounded-2xl p-5 text-center">
+
+      <p class="text-lg">
+        本質は「有益発信」ではなく
+        <span class="text-yellow-300 font-bold">
+          感情を動かし行動させる設計
+        </span>
+      </p>
+
+    </div>
+
+  </div>
+</div>
   <!-- ===================== -->
   <!-- 第5章 -->
   <!-- ===================== -->
